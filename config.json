@@ -1,0 +1,113 @@
+{
+    "aws_ssh_key": 
+    {
+        "private_key": "cis4010-key-aws.pem"
+    },
+    "azure_ssh_key":
+    {
+        "public_key": "cis4010-key-azure.pub",
+        "private_key": "cis4010-key-azure"
+    },
+    "aws_vms": 
+    [
+        {
+            "username": "ec2-user",
+            "vm_image_name": "ami-0e2ff28bfb72a4e45",
+            "instance_name": "cis4010_test_3",
+            "size": "t2.micro",
+            "storage": {
+                "size": 8
+            },
+            "count": 1,
+            "package_manager": "yum",
+            "docker_images": 
+            [
+                {
+                    "name": "golang",
+                    "registry": "library",
+                    "background": false
+                },
+                {
+                    "name": "gcc",
+                    "registry": "library",
+                    "background": false
+                }
+            ]
+        },
+        {
+            "username": "ubuntu",
+            "vm_image_name": "ami-07ebfd5b3428b6f4d",
+            "instance_name": "cis4010_test_4",
+            "size": "t2.micro",
+            "storage": {
+                "size": 8
+            },
+            "count": 1,
+            "package_manager": "apt",
+            "docker_images": 
+            [
+                {
+                    "name": "golang",
+                    "registry": "library",
+                    "background": false
+                },
+                {
+                    "name": "gcc",
+                    "registry": "library",
+                    "background": false
+                }
+            ]
+        }
+    ],
+    "azure_vms": 
+    [
+        {
+            "username": "dimitar",
+            "vm_image_name": "Canonical:UbuntuServer:16.04-LTS:latest",
+            "instance_name": "test_1",
+            "size": "Standard_B1s",
+            "storage": {
+                "size": 8
+            },
+            "count": 1,
+            "package_manager": "apt",
+            "docker_images": 
+            [
+                {
+                    "name": "swift",
+                    "registry": "library",
+                    "background": false
+                },
+                {
+                    "name": "julia",
+                    "registry": "library",
+                    "background": false
+                }
+            ]
+        },
+        {
+            "username": "dimitar",
+            "vm_image_name": "Debian:debian-10:10:0.20190705.396",
+            "instance_name": "test_2",
+            "size": "Standard_B1s",
+            "storage": {
+                "size": 8
+            },
+            "count": 1,
+            "package_manager": "apt",
+            "docker_images": 
+            [
+                {
+                    "name": "swift",
+                    "registry": "library",
+                    "background": false
+                },
+                {
+                    "name": "julia",
+                    "registry": "library",
+                    "background": false
+                }
+            ]
+        }
+    ]
+}

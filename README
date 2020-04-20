@@ -1,0 +1,43 @@
+************************************************************************
+Dimitar Dimitrov                                                 0922289
+CIS4010                                                               A2
+February 22, 2020
+************************************************************************
+
+The scripts vmDeployAWS and vmDeployAzure will create virtual machines 
+in their respective clouds and install docker and any docker images
+specified in the config.json file.
+
+Setup
+-----
+    - Install virtual environment creator and package manager package 
+      pipenv:
+      pip install pipenv
+
+    - Install all project dependencies:
+      pipenv install
+
+    - Configure ~/.aws/credentials file with your access token
+
+    - Generate ssh key for azure in the root directory
+      ssh-keygen -t rsa -b 2048 -f cis4010-key-azure
+
+Usage
+-----
+    - vmDeployAWS:
+      pipenv run python3 vmDeployAWS.py
+
+    - vmDeployAzure:
+      pipenv run python3 vmDeployAzure.py
+
+    - monitor
+      pipenv run python3 monitor.py
+
+Notes
+-----
+    - Created vms must have physical storage. If left empty will default
+      to snapshot default.
+
+    - Can only create vm with one physical disk at the moment.
+
+    - Virtual machines must have either yum or apt package installers.
