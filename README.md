@@ -17,7 +17,7 @@ The scripts vmDeployAWS and vmDeployAzure will create virtual machines in their 
     ssh-keygen -t rsa -b 2048 -f cis4010-key-azure
     ```
 
-* Configure [config.py](./config.py) to your liking.
+* Configure [config.json](./config.json) to your liking.
 
 ## Run
 
