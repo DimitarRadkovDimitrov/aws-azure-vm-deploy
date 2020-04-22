@@ -19,6 +19,8 @@ The scripts vmDeployAWS and vmDeployAzure will create virtual machines in their 
 
 * Configure [config.json](./config.json) to your liking.
 
+<br>
+
 ## Run
 
 * Deploy VMs in AWS.
